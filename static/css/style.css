@@ -1,0 +1,193 @@
+/* =================================
+   WARUNGPINTAR - GLOBAL STYLE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9f7;
+    color: #26352b;
+}
+
+/* =================================
+   DASHBOARD LAYOUT
+================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-right: 1px solid #e8eee9;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #24834a;
+    margin-bottom: 40px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #647368;
+    padding: 13px 15px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    background-color: #edf7ef;
+    color: #24834a;
+}
+
+.sidebar nav a.active {
+    background-color: #e5f4e9;
+    color: #24834a;
+    font-weight: bold;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    min-width: 0;
+}
+
+.page-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #26352b;
+}
+
+.page-description {
+    color: #829087;
+    margin-bottom: 30px;
+}
+
+/* =================================
+   SUMMARY CARDS
+================================= */
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e8eee9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #829087;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 26px;
+    color: #24834a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #9aa59d;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* HP */
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid #e8eee9;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        gap: 5px;
+        overflow-x: auto;
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}

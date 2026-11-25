@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | WarungPintar</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                WarungPintar.
+            </div>
+
+            <nav>
+                <a href="/" class="active">Dashboard</a>
+                <a href="#">Produk</a>
+                <a href="#">Kasir</a>
+                <a href="#">Stok</a>
+                <a href="#">Laporan</a>
+            </nav>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <h1 class="page-title">
+                Dashboard
+            </h1>
+
+            <p class="page-description">
+                Selamat datang kembali di WarungPintar!
+            </p>
+            <div class="summary-cards">
+
+                <div class="card">
+                    <h3>Total Penjualan</h3>
+                    <h2>Rp2.450.000</h2>
+                    <p>Penjualan hari ini</p>
+                </div>
+
+                <div class="card">
+                    <h3>Transaksi</h3>
+                    <h2>48</h2>
+                    <p>Transaksi hari ini</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Produk</h3>
+                    <h2>125</h2>
+                    <p>Produk terdaftar</p>
+                </div>
+
+                <div class="card">
+                    <h3>Stok Menipis</h3>
+                    <h2>8</h2>
+                    <p>Produk perlu di-restock</p>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
